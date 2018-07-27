@@ -20,9 +20,15 @@ namespace _02___Topicos_Avancados___Generics
             Serializacao.Serializar(casa);
             Serializacao.Serializar(usuario);
 
-            Carro carro2 = Serializacao.Deserializar();
-            Casa casa2 = Serializacao.Deserializar();
-            Usuario usuario2 = Serializacao.Deserializar();
+            Carro carro2 = Serializacao.Deserializar<Carro>();
+            Casa casa2 = Serializacao.Deserializar<Casa>();
+            Usuario usuario2 = Serializacao.Deserializar<Usuario>();
+
+            Console.WriteLine("Carro:" + carro2.marca + " Modelo: " + carro2.modelo);
+            Console.WriteLine("Cidade: " + casa2.cidade+ " Endereço: " + casa2.endereco);
+            Console.WriteLine("Nome: " + usuario2.nome+ " Email: " + usuario2.email);
+
+            Console.ReadLine();
         }
     }
 }
